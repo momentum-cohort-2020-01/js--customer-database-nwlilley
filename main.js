@@ -64,7 +64,7 @@ for (let cust of customers) {
   let dateDiv = document.createElement('div')
   dateDiv.innerText = dateOfBirth + '\n' + customerSince
   profileDiv.appendChild(dateDiv)
-  addressDiv.classList.add('dates')
+  dateDiv.classList.add('dates')
 
 }
 
