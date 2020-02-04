@@ -1,3 +1,5 @@
+console.log('states js linked')
+
 var usStates = [
   { name: 'ALABAMA', abbreviation: 'AL' },
   { name: 'ALASKA', abbreviation: 'AK' },
