@@ -29,6 +29,7 @@ profileContainer.classList.add('profile-container')
 //   return li
 // })
 
+let cust = customers[0]
 
 for (let cust of customers) {
   let profileDiv = document.createElement('div')
@@ -53,14 +54,14 @@ for (let cust of customers) {
   profileDiv.appendChild(emailDiv)
   emailDiv.classList.add('email')
   //ADDRESS
-  let address = cust.location.street + "\n" + cust.location.city + ', ' + cust.location.state + ' ' + cust.location.postcode
+  let address = cust.location.street + "\n" + cust.location.city + ', ' + nameToAbbr(cust.location.state) + ' ' + cust.location.postcode
   let addressDiv = document.createElement('div')
   addressDiv.innerText = address
   profileDiv.appendChild(addressDiv)
   addressDiv.classList.add('address')
   //DATES
-  let dateOfBirth = `DOB: ${moment(cust.dob).format('MMMM Do YYYY')}`
-  let customerSince = `Customer since: ${moment(cust.registered).format('MMMM Do YYYY')}`
+  let dateOfBirth = `DOB: ${moment(cust.dob).format('MMMM Do, YYYY')}`
+  let customerSince = `Customer since: ${moment(cust.registered).format('MMMM Do, YYYY')}`
   let dateDiv = document.createElement('div')
   dateDiv.innerText = dateOfBirth + '\n' + customerSince
   profileDiv.appendChild(dateDiv)

@@ -35,7 +35,7 @@ body {
 }
 
 .profile-photo {
-  border-radius: 50%;
+  border-radius: 55% 80%;
   width: 65%;
   margin: 10px;
 }
