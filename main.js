@@ -15,8 +15,19 @@ container.appendChild(profileContainer)
 profileContainer.classList.add('profile-container')
 
 
-//CREATE ONE PROFILE
+// function capitalizeFirst (string) {
+//   return string[0].toUpperCase() + string.slice(1)
+// }
 
+// const custNames = customers.map(function (customer) {
+//   return capitalizeFirst(customer.name.first) + ' ' + capitalizeFirst(customer.name.last)
+// })
+
+// const customerListItems = customerNames.map(function (name) {
+//   const li =document.createElement('li')
+//   li.textContent = name
+//   return li
+// })
 
 
 for (let cust of customers) {
@@ -48,7 +59,13 @@ for (let cust of customers) {
   profileDiv.appendChild(addressDiv)
   addressDiv.classList.add('address')
   //DATES
-  let dateOfBirth = cust.dob
-  let custSince = cust.registered
+  let dateOfBirth = `DOB: ${moment(cust.dob).format('MMMM Do YYYY')}`
+  let customerSince = `Customer since: ${moment(cust.registered).format('MMMM Do YYYY')}`
+  let dateDiv = document.createElement('div')
+  dateDiv.innerText = dateOfBirth + '\n' + customerSince
+  profileDiv.appendChild(dateDiv)
+  addressDiv.classList.add('dates')
 
 }
+
+//create array, push needed cust values into it
